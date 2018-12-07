@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Article{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1>Write your article</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add to Dictionary</button>
+    </form>
+  </div>
+{% endblock %}
